@@ -1,0 +1,27 @@
+//@size: 111px;
+
+.circle(@size) {
+  .border-radius(50%);
+  height: @size;
+  width: @size;
+}
+.spinner {
+  margin: auto;
+
+  &.spinner_splash {
+    background: @white;
+    @size: 111px;
+    clip: rect(0, @size, @size, (@size / 2));
+    .circle(@size);
+
+    .test {
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #f00;
+      clip: rect(0, (@size / 2), @size, 0);
+      .circle(@size);
+      .rotate(45deg);
+    }
+  }
+}
