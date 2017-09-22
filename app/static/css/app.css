@@ -1,3 +1,25 @@
+@import "../css/icons.css";
+@font-face {
+  font-family: 'Circe';
+  src: url('../fonts/Circe-Regular.eot');
+  src: url('../fonts/Circe-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Circe-Regular.woff') format('woff'), url('../fonts/Circe-Regular.ttf') format('truetype'), url('../fonts/Circe-Regular.svg#Circe') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Circe';
+  src: url('../fonts/Circe-Bold.eot');
+  src: url('../fonts/Circe-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Circe-Bold.woff') format('woff'), url('../fonts/Circe-Bold.ttf') format('truetype'), url('../fonts/Circe-Bold.svg#Circe') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Circe';
+  src: url('../fonts/Circe-Light.eot');
+  src: url('../fonts/Circe-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Circe-Light.woff') format('woff'), url('../fonts/Circe-Light.ttf') format('truetype'), url('../fonts/Circe-Light.svg#Circe') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
 html,
 body {
   width: 100%;
@@ -6,6 +28,7 @@ body {
 }
 body {
   position: relative;
+  font-family: 'Circe', Helvetica, Arial, sans-serif;
 }
 .app {
   position: absolute;
@@ -24,17 +47,52 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+  text-align: center;
   background: #111111 url("../img/splash/splash.bg.png") no-repeat 50% 100%;
+  z-index: 1000;
 }
-.splash .spinner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -130px;
-  margin-left: -56px;
+.splash:before {
+  content: '';
+  height: 100%;
+  width: 0;
+  background: none;
+}
+.splash:before,
+.splash > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+.splash__logo {
+  display: inline-block;
+  margin: 102px auto 102px;
+}
+.splash__logo .tvz-icon {
+  font-size: 75px;
+}
+.splash__logo .tvz-icon-logo-tv {
+  color: #016eb4;
+}
+.splash__logo .tvz-icon-logo-zavr {
+  color: #4caa06;
+}
+.splash__title {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 1px;
+  margin: 0;
+}
+@media (max-width: 1280px) {
+  .splash__logo {
+    margin: 80px auto 60px;
+  }
 }
 * {
   outline: none;
+}
+.tvz-hide {
+  display: none !important;
 }
 a {
   text-decoration: none;
@@ -43,27 +101,27 @@ a {
   margin: auto;
 }
 .spinner.spinner_splash {
-  background: #ffffff;
-  clip: rect(0, 111px, 111px, 55.5px);
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
   height: 111px;
   width: 111px;
+  background: url("../img/splash/loader.png") no-repeat 50% 50%;
+  -webkit-animation: 0.8s spin linear infinite;
+  -o-animation: 0.8s spin linear infinite;
+  animation: 0.8s spin linear infinite;
 }
-.spinner.spinner_splash .test {
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: #f00;
-  clip: rect(0, 55.5px, 111px, 0);
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  height: 111px;
-  width: 111px;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
 }

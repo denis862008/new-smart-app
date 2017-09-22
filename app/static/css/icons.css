@@ -1,0 +1,150 @@
+@font-face {
+  font-family: 'tvz-icons';
+  src:  url('../fonts/tvz-icons.eot?uyhhcx');
+  src:  url('../fonts/tvz-icons.eot?uyhhcx#iefix') format('embedded-opentype'),
+    url('../fonts/tvz-icons.ttf?uyhhcx') format('truetype'),
+    url('../fonts/tvz-icons.woff?uyhhcx') format('woff'),
+    url('../fonts/tvz-icons.svg?uyhhcx#tvz-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.tvz-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  display: inline-block;
+  font-family: 'tvz-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tvz-icon-clock:before {
+  content: "\e900";
+}
+.tvz-icon-drop:before {
+  content: "\e901";
+}
+.tvz-icon-play:before {
+  content: "\e902";
+}
+.tvz-icon-set:before {
+  content: "\e903";
+}
+.tvz-icon-burger:before {
+  content: "\e904";
+}
+.tvz-icon-lock:before {
+  content: "\e905";
+}
+.tvz-icon-search:before {
+  content: "\e906";
+}
+.tvz-icon-back:before {
+  content: "\e907";
+}
+.tvz-icon-hd:before {
+  content: "\e908";
+}
+.tvz-icon-hint:before {
+  content: "\e909";
+}
+.tvz-icon-info:before {
+  content: "\e90a";
+}
+.tvz-icon-like:before {
+  content: "\e90b";
+}
+.tvz-icon-menu-addtv:before {
+  content: "\e90c";
+}
+.tvz-icon-menu-bought:before {
+  content: "\e90d";
+}
+.tvz-icon-menu-card:before {
+  content: "\e90e";
+}
+.tvz-icon-menu-email:before {
+  content: "\e90f";
+}
+.tvz-icon-menu-faq:before {
+  content: "\e910";
+}
+.tvz-icon-menu-favs:before {
+  content: "\e911";
+}
+.tvz-icon-menu-login:before {
+  content: "\e912";
+}
+.tvz-icon-menu-parental:before {
+  content: "\e913";
+}
+.tvz-icon-menu-phone:before {
+  content: "\e914";
+}
+.tvz-icon-menu-promo:before {
+  content: "\e915";
+}
+.tvz-icon-menu-receipt:before {
+  content: "\e916";
+}
+.tvz-icon-menu-recent:before {
+  content: "\e917";
+}
+.tvz-icon-menu-wallet:before {
+  content: "\e918";
+}
+.tvz-icon-moar:before {
+  content: "\e919";
+}
+.tvz-icon-player-forward:before {
+  content: "\e91a";
+}
+.tvz-icon-player-next:before {
+  content: "\e91b";
+}
+.tvz-icon-player-play:before {
+  content: "\e91c";
+}
+.tvz-icon-player-prev:before {
+  content: "\e91d";
+}
+.tvz-icon-sd:before {
+  content: "\e91e";
+}
+.tvz-icon-subs:before {
+  content: "\e91f";
+}
+.tvz-icon-tofav:before {
+  content: "\e920";
+}
+.tvz-icon-trailer-off:before {
+  content: "\e921";
+}
+.tvz-icon-trailer:before {
+  content: "\e922";
+}
+.tvz-icon-navarr:before {
+  content: "\e923";
+}
+.tvz-icon-button-play-icon:before {
+  content: "\e924";
+}
+.tvz-icon-button-play:before {
+  content: "\e925";
+}
+.tvz-icon-logo-tv:before {
+  content: "\e926";
+}
+.tvz-icon-logo-zavr:before {
+  content: "\e927";
+}
+.tvz-icon-tvzavr:before {
+  content: "\e928";
+}
