@@ -1,0 +1,43 @@
+.circle(@size) {
+  .border-radius(50%);
+  height: @size;
+  width: @size;
+}
+.spinner {
+  margin: auto;
+
+  &.spinner_splash {}
+
+  &.spinner_bounce {
+    position: absolute;
+    height: 12px;
+    width: 36px;
+    font-size: 0;
+    display: none;
+
+    .spinner__item {
+      display: inline-block;
+      .circle(8px);
+      background-color: #5a6370;
+      .animation(spinBounce 1s infinite ease-in-out);
+      .animation-fill-mode(both);
+
+      &:first-child {
+        .animation-delay(-0.32s);
+      }
+
+      &:nth-child(2n) {
+        margin: 0 6px;
+        .animation-delay(-0.16s);
+      }
+    }
+  }
+}
+
+@keyframes spinBounce {
+  0%, 80%, 100% {
+    .scale(1);
+  } 40% {
+    .scale(1.4);
+  }
+}

@@ -1,0 +1,51 @@
+.carousel {
+  //overflow: hidden;
+
+  &_main-screen {
+    padding-top: 274px;
+
+    > .spinner {
+      &_bounce {
+        top: 196px;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &.tvz-loading {
+      > .spinner_bounce {
+        display: block;
+      }
+    }
+  }
+
+  &__track {
+    position: relative;
+    .transition(all 0.3s ease);
+
+    &_v {
+      .carousel__track__item {
+        margin-bottom: 40px;
+      }
+    }
+
+    &_h {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    padding-left: 72px;
+  }
+
+  .row {
+    margin-bottom: 0;
+  }
+
+  .clip-description {
+    height: 134px;
+    width: 1170px;
+  }
+}

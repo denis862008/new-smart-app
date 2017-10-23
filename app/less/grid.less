@@ -1,0 +1,29 @@
+@containerWidthFHD: 1890; // 1920px - 15 * 2
+@containerWidthHD:  1250; // 1280px - 15 * 2
+
+@colsNumber: 20;
+@colWidth:  66px;
+@gutter:    30px;
+
+
+.make-grid() {
+  .loop(@i) when (@i <= @colsNumber) {
+    [class*="tvz-col-@{i}"] {
+      width: (@colWidth * @i) + @gutter * (@i - 1);
+    }
+
+    .loop(@i + 1);
+  }
+
+  .loop(1);
+}
+
+.make-grid();
+
+@media (min-width: 1281px) and (max-width: 1920px) {
+  //.make-grid(@containerWidthFHD);
+}
+
+@media (max-width: 1280px) {
+  //.make-grid(@containerWidthHD);
+}
