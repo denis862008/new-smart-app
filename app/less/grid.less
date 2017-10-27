@@ -1,12 +1,12 @@
-@containerWidthFHD: 1890; // 1920px - 15 * 2
-@containerWidthHD:  1250; // 1280px - 15 * 2
-
-@colsNumber: 20;
-@colWidth:  66px;
-@gutter:    30px;
+@colsNumber:  20;
+//@colWidth:    66;
+//@gutter:      30;
 
 
-.make-grid() {
+.make-grid(@def, @gutter) {
+
+  @colWidth: (@def - 19 * @gutter) / @colsNumber;
+
   .loop(@i) when (@i <= @colsNumber) {
     [class*="tvz-col-@{i}"] {
       width: (@colWidth * @i) + @gutter * (@i - 1);
@@ -18,12 +18,13 @@
   .loop(1);
 }
 
-.make-grid();
+// (@colWidth * @i) + @gutter * (@i - 1)
+// (((@colsNumber * @colWidth) / (@colsNumber / @i) + ((@colsNumber - 1) * @gutter) / (@colsNumber / @i)) / @def) * 100%;
 
 @media (min-width: 1281px) and (max-width: 1920px) {
-  //.make-grid(@containerWidthFHD);
+  .make-grid(@containerWidthFHD, 30px);
 }
 
 @media (max-width: 1280px) {
-  //.make-grid(@containerWidthHD);
+  .make-grid(@containerWidthHD, 20px);
 }

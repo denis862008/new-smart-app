@@ -25,6 +25,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.tvz-icon-navarr-down:before {
+  content: "\e923";
+}
+.tvz-icon-navarr-left:before {
+  content: "\e929";
+}
+.tvz-icon-navarr-right:before {
+  content: "\e92a";
+}
+.tvz-icon-navarr-up:before {
+  content: "\e92b";
+}
+.tvz-icon-back:before {
+  content: "\e907";
+}
 .tvz-icon-clock:before {
   content: "\e900";
 }
@@ -45,9 +60,6 @@
 }
 .tvz-icon-search:before {
   content: "\e906";
-}
-.tvz-icon-back:before {
-  content: "\e907";
 }
 .tvz-icon-hd:before {
   content: "\e908";
@@ -129,9 +141,6 @@
 }
 .tvz-icon-trailer:before {
   content: "\e922";
-}
-.tvz-icon-navarr:before {
-  content: "\e923";
 }
 .tvz-icon-button-play-icon:before {
   content: "\e924";

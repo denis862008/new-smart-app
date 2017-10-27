@@ -1,8 +1,7 @@
 .carousel {
-  //overflow: hidden;
-
-  &_main-screen {
-    padding-top: 274px;
+  &_main {
+    //padding-top: 210px;
+    //height: 100%;
 
     > .spinner {
       &_bounce {
@@ -19,25 +18,43 @@
     }
   }
 
-  &__track {
+  &__wrapper {
+    .clearfix;
     position: relative;
-    .transition(all 0.3s ease);
+  }
+
+  &__overflow {
+    float: left;
+    overflow: hidden;
+    position: relative;
+    //position: absolute;
+    //overflow: hidden;
+  }
+
+  &__inner {
+    .clearfix;
+    position: relative;
+    margin: 0px -15px;
+    padding: 0 15px;
 
     &_v {
-      .carousel__track__item {
-        margin-bottom: 40px;
-      }
-    }
+      margin: 0;
+      padding: 0;
 
-    &_h {
-      padding-left: 30px;
-      padding-right: 30px;
+      > .carousel__item {
+        float: none;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 34px;
+      }
     }
   }
 
-  &__title {
-    margin-bottom: 24px;
-    padding-left: 72px;
+  &__item {
+    position: relative;
+    float: left;
+    //padding: 0 15px;
+    .transition(all 0.3s ease);
   }
 
   .row {
@@ -45,7 +62,89 @@
   }
 
   .clip-description {
-    height: 134px;
+    height: 182px;
     width: 1170px;
+    .box-sizing(border-box);
+  }
+
+  .carousel__category-title {
+    margin-bottom: 28px;
+    padding-left: 74px;
+  }
+
+  &__ctrl {
+    position: absolute;
+    text-align: center;
+
+    &_left, &_right {
+      width: 121px;
+      height: 165px;
+      top: 186px;
+
+      .tvz-icon {
+        font-size: 70px;
+        line-height: 165px;
+      }
+    }
+
+    &_left {
+      left: -@appPaddings;
+      background: linear-gradient(to left, rgba(17, 17, 17, 0), #111111);
+    }
+
+    &_right {
+      right: -@appPaddings;
+      background: linear-gradient(to right, rgba(17, 17, 17, 0), #111111);
+    }
+
+    &_up, &_down {
+      width: 165px;
+      height: 121px;
+      left: 50%;
+      margin-left: -96px;
+
+      .tvz-icon {
+        font-size: 28px;
+        line-height: 121px;
+      }
+    }
+
+    &_up {
+      top: 86px;
+      background: linear-gradient(to top, rgba(17, 17, 17, 0), #111111);
+    }
+
+    &_down {
+      top: 502px;
+      background: linear-gradient(to bottom, rgba(17, 17, 17, 0), #111111);
+    }
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1920px) {
+  .carousel {
+    &_main {padding-top: 210px;}
+
+    &__item {
+      padding: 0 15px;
+    }
+  }
+
+  .clip-description {
+    padding: 15px 15px 15px 74px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .carousel {
+    &_main {padding-top: 50px;}
+
+    &__item {
+      padding: 0 10px;
+    }
+
+    .clip-description {
+      padding: 15px 15px 15px 74px;
+    }
   }
 }
